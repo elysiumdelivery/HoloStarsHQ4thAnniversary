@@ -3,7 +3,7 @@ const staff_txt = "05_Staff_Assets/staffcredit.txt";
 $(function placeStaffCredits() {
     const staff_credits = document.querySelector(".credits.staff");
     var text = loadFile(staff_txt);
-    staff_credits.textContent = text;
+    staff_credits.innerHTML = text;
 });
 
 $(function scrolltoTop() {

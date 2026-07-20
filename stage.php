@@ -46,7 +46,8 @@
             <img class="donorImage top" src="03_Stage_Assets/Charity Certificates/regisaltarecharity01.png">
             <img class="donorImage" src="03_Stage_Assets/Charity Certificates/axelsyrioscharity01.png">
             <img class="donorImage" src="03_Stage_Assets/Charity Certificates/axelsyrioscharity02.png">
-            <img class="donorImage bottom" src="Assets/donorlist.png">
+            <img class="donorImage bottom" src="03_Stage_Assets/donorlist.png">
+            <p class="credits stage"></p>
             <img class="chibis bottom" src="03_Stage_Assets/Sea of Stars stage chibis/seaofstarscheeb - set.png" loading="lazy">
         </div>
     </main>

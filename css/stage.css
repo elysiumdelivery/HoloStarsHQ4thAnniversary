@@ -34,3 +34,11 @@
 .scrollframe .chibis.bottom{
     top: 0%;
 }
+.credits{
+    white-space: pre;
+    text-align: left;
+    margin-bottom: 10em;
+}
+a{
+    color: #2a3e49;
+}
