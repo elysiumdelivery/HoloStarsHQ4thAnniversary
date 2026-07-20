@@ -26,6 +26,13 @@ h1{
 
 }
 .gallery .promo_image{
-    padding: 0.5em;
+    padding: 5em;
     width: 25vw;
 }
+.gallery .promo_image:hover{
+    background-color: blue;
+    /* display: none; */
+}
+/* .gallery .:hover{
+    display: inline;
+} */

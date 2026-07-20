@@ -1,4 +1,4 @@
-const staff_txt = "05_staff_assets/staffcredit.txt";
+const staff_txt = "05_Staff_Assets/staffcredit.txt";
 const promos_path = "05_Staff_Assets/social_media/";
 
 $(function placeStaffCredits() {
@@ -13,7 +13,7 @@ $(function scrolltoTop() {
         success: function (data) {
             $(data).find("a").attr("href", function (i, val) {
                 if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                    $(".gallery").append( "<img class=promo_image src='"+ promos_path + val +"'>" );
+                    $(".gallery").append( "<p class=promo_credit><img class=promo_image src='"+ promos_path + val +"'></p>" );
                 } 
             });
         }
