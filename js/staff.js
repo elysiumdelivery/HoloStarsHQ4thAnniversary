@@ -1,5 +1,6 @@
 const staff_txt = "05_Staff_Assets/staffcredit.txt";
-const promos_path = "05_Staff_Assets/social_media/";
+const promos_path = "/05_Staff_Assets/social_media/";
+const promos_txt = "05_Staff_Assets/promo_image_paths.txt/";
 
 $(function placeStaffCredits() {
     const staff_credits = document.querySelector(".credits.staff");
@@ -8,16 +9,12 @@ $(function placeStaffCredits() {
 });
 
 $(function scrolltoTop() {
-    $.ajax({
-        url : promos_path,
-        success: function (data) {
-            $(data).find("a").attr("href", function (i, val) {
-                if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                    $(".gallery").append( "<p class=promo_credit><img class=promo_image src='"+ promos_path + val +"'></p>" );
-                } 
-            });
-        }
-    });
+    var text = loadFile(promos_txt).split("\r\n"); ;
+    console.log(text);
+    for(let i = 0; i < text.length; i++){
+        $(".gallery").append( "<div class=promo><img class=promo_image src='"+ text[i] +"'><p class=promo_credit>kill me</p></div>" );
+    }
+    
 });
 
 $(function scrolltoTop() {

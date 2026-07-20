@@ -29,10 +29,10 @@ h1{
     padding: 5em;
     width: 25vw;
 }
-.gallery .promo_image:hover{
-    background-color: blue;
-    /* display: none; */
+.gallery .promo_credit{
+    display: none;
 }
-/* .gallery .:hover{
+.gallery .promo_credit:hover{
+    background-color: white;
     display: inline;
-} */
+}
