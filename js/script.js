@@ -5,7 +5,8 @@ $(function placeNavButtons() {
     for (i = 1; i <= 7; i++){
         number = i < 10? '0'+i : i;
         $(".sidebar").append('<li><a href = "'+pages[i-1]+'"><h1>'+page_titles[i-1]+'</h1></a></li>');
-        $(".topbar").append('<li class="hideOnMobile"><a href = "'+pages[i-1]+'"><img id="button_'+number+'" src='+buttonPath+'button_'+number+'.png onmouseenter="buttonHover('+i+')" onmouseleave="buttonHover('+i+', false)"></a></li>');
+        $(".topbar").append('<li class="hideOnMobile" id="button_'+number+'"><a href = "'+pages[i-1]+'"><img src='+buttonPath+'button_'+number+'.png onmouseenter="buttonHover('+i+')"></a></li>');
+        $(".topbar").append('<li class="hideOnMobile hover" id="button_'+number+'_hover"><a href = "'+pages[i-1]+'"><img src='+buttonPath+'button_'+number+'_hover.png onmouseleave="buttonHover('+i+', false)"></a></li>');
     }
 });
 function showSidebar(){
@@ -18,19 +19,21 @@ function hideSidebar(){
 }
 function buttonHover(id, enter = true){
     let button_id;
-    let imgPathHover;
-    let imgPathNormal;
-    let image;
     if (id < 10){
         button_id = "button_0"+id;
-        imgPathHover = buttonPath+button_id+"_hover.png";
-        imgPathNormal = buttonPath+button_id+".png";
     }
     else{
         button_id = "button_"+id;
-        imgPathHover = buttonPath+button_id+"_hover.png";
-        imgPathNormal = buttonPath+button_id+".png";
     }
-    image = document.getElementById(button_id);
-    image.src = enter? imgPathHover: imgPathNormal;
+    const button = document.querySelector("#"+button_id);
+    const buttonHover = document.querySelector("#"+button_id+"_hover");
+    
+    if (enter){
+        button.style.display = "none"
+        buttonHover.style.display = "inline"
+    }
+    else{
+        buttonHover.style.display = "none"
+        button.style.display = "inline"
+    }
 }

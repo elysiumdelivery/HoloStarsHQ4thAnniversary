@@ -51,6 +51,9 @@ nav a{
     align-items: center;
     color: #2a3e49;
 }
+nav .hover{
+    display: none;
+}
 nav .topbar a{
     padding: 5px 0px
 }
