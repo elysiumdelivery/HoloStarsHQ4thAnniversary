@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halllway</title>
+    <title>Greenroom</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hallway.css">
+    <link rel="stylesheet" href="css/greenroom.css">
+    <link rel="stylesheet" href="css/entry-overlay.css">
     <link rel="stylesheet" href="css/entry.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/js/script.js"></script>
@@ -16,12 +17,10 @@
 <body>
     <?php include "header.html"; ?>
     <main>
-        <img class='background-plate' src="01_Background/3_Hallway.png" loading="lazy">
-        <div class="rooms">
-            <a class="Altare" href="#"><img src="04_Entries/03_hallway/01_door_icon.png"></a>
-            <a class="Axel" href="#"><img src="04_Entries/03_hallway/02_door_icon.png"></a>
-            <a class="Staff" href="#"><img src="04_Entries/03_hallway/03_door_icon.png"></a>
+        <img class='background-plate' src="01_Background/4_Greenroom.png" loading="lazy">
+        <div class="entries">
         </div>
+        <?php include "entry-overlay.html"; ?>
     </main>
     <?php include "footer.html"; ?>
 </body>

@@ -6,6 +6,8 @@
     <title>Lobby</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lobby.css">
+    <link rel="stylesheet" href="css/entry-overlay.css">
+    <link rel="stylesheet" href="css/entry.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-csv@1.0.21/src/jquery.csv.min.js"></script>
     <script src="/js/cvsLoader.js"></script>
