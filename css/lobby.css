@@ -1,3 +1,4 @@
+
 .entries{
     position: absolute;
     padding-top: 10px;
@@ -20,14 +21,41 @@
     padding: 10px;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(85, 44, 150, 0.5);
+    background-color: rgba(229, 229, 229, 0.5);
     display: none;
     flex-direction: column;
     align-items: center;
 }
+.entry-overlay .title{
+    color: #2a3e49;
+    padding-top: 20px;
+}
+.entry-overlay .close-button{
+    position: fixed;
+    height: 1em;
+    width: 1em;
+    right: 0%;
+    top: 0%;
+    padding: 0.75em;
+    margin: 0.75em;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.75);
+}
+.entry-overlay .close-button:hover{
+    background-color: rgba(255,255,255,1);
+}
 .entry-overlay .image{
-    max-height: calc(80dvh - 5em);
+    max-height: calc(80dvh - 2em);
     max-width: 80vw;
+}
+.entry-overlay p{
+    color: #2a3e49;
+    max-width: 40vw;
+    max-height: 4.5em;
+    overflow-y: auto;
+}
+.entry-overlay .author{
+    place-self: left;;
 }
 #guestbook{
     position: absolute;

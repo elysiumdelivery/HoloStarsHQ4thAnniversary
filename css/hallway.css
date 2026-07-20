@@ -1,0 +1,10 @@
+.rooms{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 30%;
+    left: 30%;
+}
+.rooms a{
+    position: relative;
+}

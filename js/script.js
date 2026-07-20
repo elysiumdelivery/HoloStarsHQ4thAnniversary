@@ -1,6 +1,6 @@
 $(function placeNavButtons() {
     let page_titles = ["Home", "Lobby", "Hallway", "Green Room", "Altare's Room", "Axel's Room", "Stage"];
-    let pages = ['index.php','lobby.php','#','#','#','#','stage.php'];
+    let pages = ['index.php','lobby.php','hallway.php','#','#','#','stage.php'];
     for (i = 1; i <= 7; i++){
         number = i < 10? '0'+i : i;
         $(".sidebar").append('<li><a href = "'+pages[i-1]+'"><h1>'+page_titles[i-1]+'</h1></a></li>');
