@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axel's Room</title>
+    <title>Hallway</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/axel.css">
+    <link rel="stylesheet" href="css/hallway.css">
     <link rel="stylesheet" href="css/entry.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-csv@1.0.21/src/jquery.csv.min.js"></script>
     <script src="/js/script.js"></script>
-    <script type="module" src="/js/axel.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include "header.html"; ?>
+    <?php include __DIR__ . "/../header.html"; ?>
     <main>
-        <img class='background-plate' src="01_Background/6_RoomAxel.png" loading="lazy">
-        <div class="entries">
+        <img class='background-plate' src="01_Background/3_Hallway.png" loading="lazy">
+        <div class="rooms">
+            <a href="altare.php"><img class="entry altare" src="04_Entries/03_hallway/01_door_icon.png"></a>
+            <a href="axel.php"><img class="entry axel" src="04_Entries/03_hallway/02_door_icon.png"></a>
+            <a href="staff.php"><img class="entry staff" src="04_Entries/03_hallway/03_door_icon.png"></a>
         </div>
-        <?php include "entryOverlay.html"; ?>
     </main>
-    <?php include "footer.html"; ?>
+    <?php include __DIR__ . "/../footer.html"; ?>
 </body>
 </html>

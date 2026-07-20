@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include "header.html"; ?>
+    <?php include __DIR__ . "/../header.html"; ?>
     <main>
         <img class='background-plate' src="01_Background/7_Stage.png" loading="lazy">
         <audio class="bgm" autoplay loop>
@@ -51,6 +51,6 @@
             <img class="chibis bottom" src="03_Stage_Assets/Sea of Stars stage chibis/seaofstarscheeb - set.png" loading="lazy">
         </div>
     </main>
-    <?php include "footer.html"; ?>
+    <?php include __DIR__ . "/../footer.html"; ?>
 </body>
 </html>

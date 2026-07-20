@@ -15,7 +15,7 @@
     
 </head>
 <body>
-    <?php include "header.html"; ?>
+    <?php include __DIR__ . "/../header.html"; ?>
     <main>
         <img class='background-plate' src="01_Background/8_Staff.png" loading="lazy">
         <div class="scrollframe">
@@ -24,7 +24,7 @@
             <h1>Social Media Promotion Images</h1>
             <div class="gallery">
                 <?php
-                    $promos_Path = "05_Staff_Assets/Social Media/";
+                    $promos_Path = __DIR__ . "/../05_Staff_Assets/Social Media/";
                     $files = scandir($promos_Path);
                     foreach($files as $file) {
                         if($file !== "." && $file !== "..") {
@@ -36,6 +36,6 @@
             </div>
         </div>
     </main>
-    <?php include "footer.html"; ?>
+    <?php include __DIR__ . "/../footer.html"; ?>
 </body>
 </html>
