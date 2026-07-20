@@ -7,7 +7,31 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/greenroom.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/hallway.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/lobby.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/staff.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/stage.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/altare.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/axel.php"
     }
   ]
 }
