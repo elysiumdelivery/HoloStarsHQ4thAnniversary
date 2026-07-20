@@ -1,46 +1,46 @@
 {
   "version": 2,
   "functions": {
-    "*.php": { "runtime": "vercel-php@0.9.0" }
+    "api/*.php": { "runtime": "vercel-php@0.9.0" }
   },
   "routes": [
     {
-      "src": "/altare.php",
+      "src": "/api/altare.php",
       "headers": { "Location": "/altare" },
       "status": 307
     },    {
-      "src": "/axel.php",
+      "src": "/api/axel.php",
       "headers": { "Location": "/axel" },
       "status": 307
     },
     {
-      "src": "/greenroom.php",
+      "src": "/api/greenroom.php",
       "headers": { "Location": "/greenroom" },
       "status": 307
     },
     {
-      "src": "/hallway.php",
+      "src": "/api/hallway.php",
       "headers": { "Location": "/hallway" },
       "status": 307
     },
     {
-      "src": "/lobby.php",
+      "src": "/api/lobby.php",
       "headers": { "Location": "/lobby" },
       "status": 307
     },
     {
-      "src": "/staff.php",
+      "src": "/api/staff.php",
       "headers": { "Location": "/staff" },
       "status": 307
     },
     {
-      "src": "/stage.php",
+      "src": "/api/stage.php",
       "headers": { "Location": "/stage" },
       "status": 307
     },
     {
-      "src": "/",
-      "dest": "/index.php"
+      "src": "/api/index.php",
+      "dest": "/index"
     },
     {
       "src": "/public/(.*)",
