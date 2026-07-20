@@ -1,3 +1,21 @@
+<?php
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+$routes = [
+    '/altare' => __DIR__ . '/altare.php',
+    '/axel' => __DIR__ . '/axel.php',
+    '/greenroom' => __DIR__ . '/greenroom.php',
+    '/hallway' => __DIR__ . '/hallway.php',
+    '/lobby' => __DIR__ . '/lobby.php',
+    '/staff' => __DIR__ . '/staff.php',
+    '/stage' => __DIR__ . '/stage.php',
+];
+
+if (isset($routes[$uri])) {
+    require $routes[$uri];
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +31,11 @@
 </head>
 <body>
     <?php include __DIR__ . "/../header.html"; ?>
+
     <main>
-        <img class='background-plate' src="/01_background/1_concerthall.png" loading="lazy">
+        <img class="background-plate" src="/01_background/1_concerthall.png" loading="lazy">
     </main>
+
     <?php include __DIR__ . "/../footer.html"; ?>
 </body>
 </html>

@@ -5,6 +5,7 @@
     }
   },
   "rewrites": [
+    { "source": "/", "destination": "/api/index.php" },
     { "source": "/lobby", "destination": "/api/lobby.php" },
     { "source": "/hallway", "destination": "/api/hallway.php" },
     { "source": "/greenroom", "destination": "/api/greenroom.php" },
