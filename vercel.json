@@ -1,13 +1,16 @@
 {
   "functions": {
-    "router.php": {
+    "api/*.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/router.php"
-    }
+    { "source": "/lobby", "destination": "/api/lobby.php" },
+    { "source": "/hallway", "destination": "/api/hallway.php" },
+    { "source": "/greenroom", "destination": "/api/greenroom.php" },
+    { "source": "/altare", "destination": "/api/altare.php" },
+    { "source": "/axel", "destination": "/api/axel.php" },
+    { "source": "/staff", "destination": "/api/staff.php" },
+    { "source": "/stage", "destination": "/api/stage.php" }
   ]
 }
