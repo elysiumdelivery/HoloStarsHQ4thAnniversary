@@ -34,7 +34,6 @@ function activateOverlay(event, entryData, entryFilePath){
     else {
         author_string += " by "+entryData[id][CSVCol.ARTIST]+"\r\nWriting by "+entryData[id][CSVCol.WRITER];
     }
-    author.setAttribute('style', 'white-space: pre;')
     author.textContent = author_string;
     document.body.style.overflow = "hidden";
     caption.scrollTop = 0;

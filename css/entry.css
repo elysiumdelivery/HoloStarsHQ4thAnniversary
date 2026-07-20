@@ -57,3 +57,6 @@
     color: #2a3e49;
     font-size: 1.25em;
 }
+.entry-overlay .caption .author b{
+    white-space: pre;
+}
