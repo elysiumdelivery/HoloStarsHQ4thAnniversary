@@ -9,11 +9,18 @@ $(function placeStaffCredits() {
 });
 
 $(function placePromos() {
-    var text = loadFile(promos_txt).split("\n");
-    console.log(text);
-    for(let i = 0; i < text.length; i++){
-        $(".gallery").append( "<div class=promo><img class=promo_image src='"+ promos_path+text[i] +"'><p class=promo_credit>kill me</p></div>" );
+    var tokens = loadFile(promos_txt).split("\n");
+    for(let i = 0; i < tokens.length; i++){
+        let text = tokens[i].trim()
+        let id = text.split(".")[0]
+        let artist = id.split("-")[1]
+        $(".gallery").append( "<div class=promo><img class=promo_image src="+ promos_path+text +" alt="+artist+"><p class=promo_credit id="+id+">"+artist+"</p></div>" );
     }
+    $(".gallery").on("mouseenter", "div.promo", function(e){
+        promoHover(e.target, true);
+    }).on( "mouseleave", ".promo", function(e){
+        promoHover(e.target, false);
+    });
 });
 
 $(function scrolltoTop() {
@@ -30,4 +37,20 @@ function loadFile(filePath) {
     result = xmlhttp.responseText;
   }
   return result;
+}
+
+function promoHover(promo_img, hover){
+    let tokens = promo_img.src.split("/");
+    let id = tokens[tokens.length-1];
+    id = id.split(".")[0];
+    let promo_text = document.getElementById(id);
+    if (hover){
+        promo_img.style = "filter: brightness(80%)";
+        promo_text.style = "display: inline";
+    }
+    else{
+        promo_img.style = "filter: brightness(100%)";
+        promo_text.style = "display: none";
+    }
+    
 }

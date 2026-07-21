@@ -25,14 +25,22 @@ h1{
     padding: 0.5em 0px 1em 0px;
 
 }
+.gallery .promo{
+    position: relative;
+}
+.gallery .promo:hover{
+    background-color: rgba(0,0,0,0.2);
+}
 .gallery .promo_image{
-    padding: 5em;
+    padding: 0.5em;
     width: 25vw;
 }
-.gallery .promo_credit{
+.gallery .promo .promo_credit{
+    position: absolute; 
     display: none;
-}
-.gallery .promo_credit:hover{
-    background-color: white;
-    display: inline;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3em;
+    color: white;
 }
