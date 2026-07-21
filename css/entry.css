@@ -13,6 +13,18 @@
 .entry:hover{
     background-color: rgba(255,255,255,0.8);
 }
+@keyframes tiltOnHover {
+    from {rotate: 0deg;
+    }
+    to {rotate: 5deg;
+    }
+}
+.tiltable:hover{
+    animation-name: tiltOnHover;
+    animation-duration: 0.2s;
+    rotate: 5deg;
+    transform-origin: center;
+}
 .entry-overlay{
     position: fixed;
     left: 0%;

@@ -1,5 +1,6 @@
 import { placeOverlay, activateOverlay, deactivateOverlay } from "./overlay.js";
 import { loadCSV } from "./cvsloader.js";
+import { scaleEntries } from "./scaleEntries.js";
 
 const CSVPath =  "/04_entries/02_lobby/entries.csv";
 const iconFilePath = "/04_entries/02_lobby/00_icons/";
@@ -17,21 +18,10 @@ $(async function placeEntries() {
     }
     for (let i = 4; i <= 28; i++){
         let number = i < 10? '0'+i : i;
-        $(".entries").append('<img class="entry photo" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
+        $(".entries").append('<img class="entry photo tiltable" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
         let entry = document.querySelector('#entry_'+number);
         entry.addEventListener("click", function (e){activateOverlay(e, entryData, entryFilePath)});
     }
     $(".entries").append('<a href="https://www.kudoboard.com/boards/aZk5R0X8" target="_blank"><img class="entry" id="guestbook" src="/04_entries/02_lobby/00_icons/29_book_icon.png" loading="lazy"></a>');
     scaleEntries();
 });
-
-function scaleEntries(){
-    let screenwidth = $("main").width();
-    for (let i = 1; i <= 28; i++){
-        let number = i < 10? '0'+i : i;
-        $("#entry_"+number).css("scale", screenwidth/1920);
-    }
-    $("#guestbook").css("scale", screenwidth/1920);
-}
-
-window.onresize = scaleEntries;
