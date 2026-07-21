@@ -7,7 +7,7 @@
     height: 100%;
 }
 .entry{
-    /* transform-origin: top left; */
+    transform-origin: top left;
     position: absolute;
 }
 .entry:hover{

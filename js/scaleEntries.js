@@ -5,8 +5,7 @@ function scaleEntries(){
     console.log(entries);
     for (let i = 0; i < entries.length; i++){
         let number = i < 10? '0'+i : i;
-        entries[i].style="transform:"+screenwidth/1920+";";
-        
+        entries[i].style="scale:"+screenwidth/1920+";";
     }
 }
 
