@@ -56,13 +56,15 @@
 }
 .entry-overlay .image{
     max-height: calc(77dvh);
-    min-height: 57dvh;
+    /* min-height: 57dvh; */
     max-width: 80vw;
 }
 .entry-overlay .caption{
+    min-width: 400px;
     margin-top: 1em;
     max-width: 40vw;
     max-height: 7em;
+
     overflow-y: auto;
 }
 .entry-overlay p{
@@ -70,5 +72,5 @@
     font-size: 1.25em;
 }
 .entry-overlay .caption .author b{
-    white-space: pre;
+    white-space: initial;
 }
