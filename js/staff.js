@@ -1,6 +1,6 @@
 const staff_txt = "05_staff_assets/staffcredit.txt";
 const promos_path = "/05_staff_assets/social_media/";
-const promos_txt = "05_staff_assets/promo_image_paths.txt/";
+const promos_txt = "05_staff_assets/socialmediapromos.txt";
 
 $(function placeStaffCredits() {
     const staff_credits = document.querySelector(".credits.staff");
@@ -12,7 +12,7 @@ $(function placePromos() {
     var text = loadFile(promos_txt).split("\n");
     console.log(text);
     for(let i = 0; i < text.length; i++){
-        $(".gallery").append( "<div class=promo><img class=promo_image src='"+ text[i] +"'><p class=promo_credit>kill me</p></div>" );
+        $(".gallery").append( "<div class=promo><img class=promo_image src='"+ promos_path+text[i] +"'><p class=promo_credit>kill me</p></div>" );
     }
 });
 
