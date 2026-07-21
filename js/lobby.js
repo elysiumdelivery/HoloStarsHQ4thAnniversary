@@ -17,7 +17,7 @@ $(async function placeEntries() {
     }
     for (let i = 4; i <= 28; i++){
         let number = i < 10? '0'+i : i;
-        $(".entries").append('<img class="entry photo" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
+        $(".entries").append('<img class="entry photo tiltable" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
         let entry = document.querySelector('#entry_'+number);
         entry.addEventListener("click", function (e){activateOverlay(e, entryData, entryFilePath)});
     }

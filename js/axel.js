@@ -15,20 +15,14 @@ $(async function placeEntries() {
     entry.addEventListener("click", function (e){activateOverlay(e, entryData, entryFilePath)});
     for (let i = 2; i <= 7; i++){
         number = i < 10? '0'+i : i;
-        $(".entries").append('<img class="entry art" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
+        if(i <= 2 || i==7){
+            $(".entries").append('<img class="entry art" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
+        }
+        else{
+            $(".entries").append('<img class="entry art tiltable" id="entry_'+number+'" src='+iconFilePath+number+'_entry_icon.png loading="lazy">');
+        }
         entry = document.querySelector('#entry_'+number);
         entry.addEventListener("click", function (e){activateOverlay(e, entryData, entryFilePath)});
     }
-    scaleEntries();
 });
 
-function scaleEntries(){
-    let screenwidth = $("main").width();
-    for (let i = 1; i <= 28; i++){
-        let number = i < 10? '0'+i : i;
-        $("#entry_"+number).css("scale", screenwidth/1920);
-    }
-    $("#guestbook").css("scale", screenwidth/1920);
-}
-
-window.onresize = scaleEntries;
