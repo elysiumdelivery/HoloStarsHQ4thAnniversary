@@ -1,3 +1,4 @@
+import { toggleFullScreen } from "../toggleFullScreen.js";
 const CSVCol = {
     ENTRY_FILE_NAME: 0,
     ENTRY_FILE: 1,
@@ -31,6 +32,7 @@ function activateOverlay(event, entryData, entryFilePath){
     const writing = document.querySelector(".entry-overlay .caption .writing");
     const author = document.querySelector(".entry-overlay .caption .author b");
     let author_string = "";
+    window.scrollTo(0, 1);
     overlay.style.display = "flex";
     title.innerHTML = entryData[id][CSVCol.ENTRY_TITLE];
     image.src = entryFilePath+number_id+"_entry.png";
@@ -54,7 +56,7 @@ function activateOverlay(event, entryData, entryFilePath){
     author.innerHTML = author_string;
     document.body.style.overflow = "hidden";
     caption.scrollTop = 0;
-    window.scrollTo(0,1)
+    // toggleFullScreen();
 }
 function deactivateOverlay(){
     const overlay = document.querySelector(".entry-overlay");
@@ -65,6 +67,7 @@ function deactivateOverlay(){
     image.src = "";
     image.style = "display: none";
     buffering.style = "display: inline";
+    toggleFullScreen();
 }
 
 export {placeOverlay, activateOverlay, deactivateOverlay};
