@@ -6,3 +6,4 @@ $(function placeHeaderFooter(){
 });
 
 window.onresize = scaleEntries;
+window.orientationchange = scaleEntries;
