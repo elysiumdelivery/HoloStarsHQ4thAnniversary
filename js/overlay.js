@@ -54,6 +54,7 @@ function activateOverlay(event, entryData, entryFilePath){
     author.innerHTML = author_string;
     document.body.style.overflow = "hidden";
     caption.scrollTop = 0;
+    window.scrollTo(0,1)
 }
 function deactivateOverlay(){
     const overlay = document.querySelector(".entry-overlay");
