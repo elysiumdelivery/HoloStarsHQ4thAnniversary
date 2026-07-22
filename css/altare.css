@@ -11,7 +11,7 @@
     left: 53.6%;
 }
 #entry_04{
-    top: 4.8%;
+    top: calc(3.8% + 10px);
     left: 6%;
 }
 #entry_05{
@@ -23,11 +23,11 @@
     left: 6.4%;
 }
 #entry_07{
-    top: 57.5%;
+    top: calc(57% - 5px);
     left: 5.2%;
 }
 #entry_08{
-    top: 72%;
+    top: calc(73% - 10px);
     left: 6%;
 }
 #entry_09{
