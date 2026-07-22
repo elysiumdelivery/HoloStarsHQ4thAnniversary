@@ -50,7 +50,7 @@ function activateOverlay(event, entryData, entryFilePath){
         author_string += event.currentTarget.classList.contains("art")? " and writing by "+entryData[id][CSVCol.ARTIST] : " by "+entryData[id][CSVCol.ARTIST];
     }
     else {
-        author_string += " by "+entryData[id][CSVCol.ARTIST]+"<br>>Writing by "+entryData[id][CSVCol.WRITER];
+        author_string += " by "+entryData[id][CSVCol.ARTIST]+"<br>Writing by "+entryData[id][CSVCol.WRITER];
     }
     author.innerHTML = author_string;
     document.body.style.overflow = "hidden";
