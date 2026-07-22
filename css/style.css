@@ -116,9 +116,9 @@ main{
     flex-direction: column;
     position: relative;
     align-items: center;
+    padding: 10px 0px;
 }
 main .background-plate{
-    padding: 10px 0px;
     max-width: 99vw;
 }
 footer{
