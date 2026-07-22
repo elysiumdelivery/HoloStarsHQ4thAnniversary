@@ -106,6 +106,9 @@ nav .menuButton img{
 .sidebar a{
     justify-content: left;
 }
+.sidebar h1{
+    padding-top: 0px;
+}
 
 main{
     display: flex;
@@ -139,7 +142,10 @@ footer #eds{
 }
 @media(max-height: 600px){
     .sidebar li{
-        height: 9vh;
-        min-height: 30px;
+        height: 8vh;
+        min-height: 10px;
+    }
+    .sidebar li h1{
+        font-size: 7vh;
     }
 }
