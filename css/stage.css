@@ -8,12 +8,15 @@
     height: 55%;
     width: 58.4%;
     display: flex;
+    font-size: 1.3vw;
     flex-direction: column;
     align-items: center;
 }
+h1{
+    text-align: center;
+}
 .scrollframe p{
-    padding: 0px 5px; 
-    font-size: 25px;
+    padding: 0px 5px;
     text-align: center;
 }
 .scrollframe .chibis{
@@ -24,6 +27,7 @@
 }
 .scrollframe .donorImage{
     padding: 0.75em;
+    width: 80%;
 }
 .scrollframe .donorImage.top{
     padding-top: 2.5em;
@@ -37,7 +41,7 @@
 .credits{
     white-space: pre;
     text-align: left;
-    margin-bottom: 10em;
+    margin-bottom: 11em;
 }
 a{
     color: #2a3e49;

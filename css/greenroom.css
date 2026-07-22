@@ -27,6 +27,14 @@
     left: 80%;
 }
 #entry_08{
-    top: 55%;
+    top: calc(55.5% - 10px);
     left: 49%;
+}
+#entry_09{
+    top: calc(60.3% - 10px);
+    left: 62.3%;
+}
+#entry_10{
+    top: calc(67.8% - 10px);
+    left: 73.6%;
 }

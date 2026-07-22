@@ -4,12 +4,13 @@
 }
 body{
     min-height: 100vh;
-    background-image: url("../assets/background.png");
+    background-image: url("../00_assets/background.png");
     background-size: 400px;
     background-repeat: repeat;
     background-position: center;
     color: #2a3e49;
     font-family: "Winky Sans";
+    overflow-x: hidden;
 }
 h1{
     font-family: "Poetsen One";
@@ -28,6 +29,7 @@ header .logo {
 }
 nav{
     height: calc(100% + 10px);
+    
 }
 nav ul{
     width: 100%;
@@ -81,7 +83,6 @@ nav .menuButton img{
     height: auto;
     width: auto;
 }
-
 .sidebar{
     position: fixed;
     top: 0px;
@@ -106,15 +107,19 @@ nav .menuButton img{
 .sidebar a{
     justify-content: left;
 }
+.sidebar h1{
+    padding-top: 0px;
+}
 
 main{
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
+    padding: 10px 0px;
 }
 main .background-plate{
-    padding: 10px 0px;
+    width: 99vw;
     max-width: 99vw;
 }
 footer{
@@ -124,16 +129,28 @@ footer{
     height: 100px;
 }
 footer #eds{
-    width: 100px;
+    width: 100px; 
 }
 
 @media(max-width: 800px){
-    .hideOnMobile{
+    .topbar{
         display: none;
     }
 }
-@media(max-width: 400px){
-    .sidebar{
-        width: 100vw;
+@media(max-width: 800px){
+    .topbar{
+        display: none;
     }
+}
+@media(max-height: 600px){
+    .sidebar li{
+        height: 8vh;
+        min-height: 10px;
+    }
+    .sidebar li h1{
+        font-size: 7vh;
+    }
+}
+#id{
+    height: calc(100%-1em);
 }

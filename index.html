@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoloTEMPUS HQ 4th Anniversary Celebration</title>
+    <title>Sea of Stars: TEMPUS HQ 4th Anni Fan Project</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/entry.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -15,7 +17,17 @@
     <header></header>
     <main>
         <img class='background-plate' src="/01_background/1_concerthall.png" loading="lazy">
+        <div class="concert">
+            <a href=lobby.html><img class="entry entrance" src="04_entries/01_home/00_icons/01_icon.png"></a>
+            <a href=https://docs.google.com/document/d/16qCeph3zUwMeJO6AiE1Xw6MM_ITC0YITXeryXpWOtG8 target="blank"><img class="entry accessibility external" src="04_entries/01_home/00_icons/02_icon.png"></a>
+            <a href=/ target="blank"><img class="entry vn" src="04_entries/01_home/00_icons/03_icon.png"></a>
+            <!-- REMEMBER TO ADD ".external" TO VN AFTER IT GETS A LINK -->
+        </div>
     </main>
     <footer></footer>
+    <script type="module">
+        import {scaleEntries} from "/js/scaleEntries.js";
+        scaleEntries();
+    </script>
 </body>
 </html>

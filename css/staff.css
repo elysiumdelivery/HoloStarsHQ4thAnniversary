@@ -1,23 +1,29 @@
 .scrollframe{
     position: absolute;
-    padding-top: 10px;
     left: 2.4%;
-    top: 5%;
-    background-color: rgba(255,255,255,0.8);
+    top: calc(4.3% + 9px);
+    /* background-color: rgba(255,255,255,0.8); */
     overflow-y: auto;
-    height: 89%;
+    height: calc(90.74% - 17.5px);
     width: 95.1%;
     display: flex;
+    font-size: 25px;
     flex-direction: column;
     align-items: center;
 }
 h1{
     padding-top: 0.5em;
+    font-size: 2em;
+    text-align: center;
 }
 .credits{
-    white-space: pre;
-    font-size: 25px;
-    text-align: left;
+    white-space: initial;
+    text-align: center;
+}
+@media (pointer:none), (pointer:coarse){
+    .scrollframe{
+        font-size: 2.3vw;
+    }
 }
 .gallery{
     display: grid;
@@ -25,7 +31,22 @@ h1{
     padding: 0.5em 0px 1em 0px;
 
 }
+.gallery .promo{
+    position: relative;
+}
+.gallery .promo:hover{
+    background-color: rgba(0,0,0,0.5);
+}
 .gallery .promo_image{
     padding: 0.5em;
     width: 25vw;
+}
+.gallery .promo .promo_credit{
+    position: absolute; 
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5em;
+    color: white;
 }

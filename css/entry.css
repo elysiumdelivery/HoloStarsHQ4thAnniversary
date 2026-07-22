@@ -13,6 +13,17 @@
 .entry:hover{
     background-color: rgba(255,255,255,0.8);
 }
+@keyframes tiltOnHover {
+    from {rotate: 0deg;
+    }
+    to {rotate: 5deg;
+    }
+}
+.tiltable:hover{
+    animation-name: tiltOnHover;
+    animation-duration: 0.2s;
+    rotate: 5deg;
+}
 .entry-overlay{
     position: fixed;
     left: 0%;
@@ -24,6 +35,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 .entry-overlay .title{
     color: #2a3e49;
@@ -43,20 +55,47 @@
 .entry-overlay .close-button:hover{
     background-color: rgba(255,255,255,1);
 }
+.entry-overlay .buffering{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.entry-overlay .buffering svg{
+    position: absolute;
+    height: 5em;
+    width: 5em;
+    transform-origin: center;
+    animation: bufferSpin 0.5s linear infinite;
+}
+@keyframes bufferSpin {
+    0% {rotate: 0deg;
+    }
+    100% {rotate: 360deg;
+    }
+}
 .entry-overlay .image{
-    max-height: calc(75dvh);
+    max-height: 77%;
+    /* min-height: 57vh; */
     max-width: 80vw;
 }
 .entry-overlay .caption{
+    min-width: 400px;
     margin-top: 1em;
+    margin-bottom: 2em;
     max-width: 40vw;
-    max-height: 7em;
-    overflow-y: auto;
+}
+@media (pointer:none), (pointer:coarse){
+    .entry-overlay .caption{
+        min-width: 200px;
+        max-width: 90vw;
+        margin-bottom: 6em;
+    }
 }
 .entry-overlay p{
     color: #2a3e49;
     font-size: 1.25em;
 }
 .entry-overlay .caption .author b{
-    white-space: pre;
+    white-space: initial;
 }
