@@ -1,14 +1,14 @@
 #entry_01{
-    top: 9.8%;
+    top: 6%;
     left: 15.5%;
 }
 #entry_02{
-    top: 55%;
+    top: 58%;
     left: 15.5%;
 }
 #entry_03{
-    top: 36%;
-    left: 15.5%;
+    top: calc(60% - 10px);
+    left: 39%;
 }
 #entry_04{
     top: 13.5%;
@@ -28,13 +28,17 @@
 }
 #entry_08{
     top: calc(55.5% - 10px);
-    left: 49%;
+    left: 51.5%;
 }
 #entry_09{
     top: calc(60.3% - 10px);
-    left: 62.3%;
+    left: 63.8%;
 }
 #entry_10{
     top: calc(67.8% - 10px);
     left: 73.6%;
+}
+#entry_11{
+    top: 32%;
+    left: 15.5%;
 }
